@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>OrtolApp — Avvio e istruzioni</title>
+		<style>
+			body {
+				font: 16px/1.7 system-ui, sans-serif;
+				color: #5c4433;
+				background: #faf6ee;
+				max-width: 820px;
+				margin: 60px auto;
+				padding: 0 25px;
+			}
+
+			h1,
+			h2,
+			a {
+				color: #4c7a52;
+			}
+
+			h1 {
+				font-size: 36px;
+			}
+
+			h2 {
+				margin-top: 40px;
+				font-size: 23px;
+			}
+
+			.start {
+				display: inline-block;
+				background: #c85a3e;
+				color: white;
+				text-decoration: none;
+				padding: 12px 30px;
+				border-radius: 30px;
+				font-weight: 700;
+			}
+
+			code {
+				background: #eee6da;
+				padding: 2px 6px;
+				border-radius: 4px;
+			}
+
+			li {
+				margin: 8px 0;
+			}
+
+			small {
+				color: #927e6c;
+			}
+
+			table {
+				border-collapse: collapse;
+				width: 100%;
+			}
+
+			td,
+			th {
+				text-align: left;
+				padding: 10px;
+				border-bottom: 1px solid #d8d2c9;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="sito/assets/logo-onboarding1.svg" alt="OrtolApp" width="170">
+		<h1>Ready to use</h1>
+		<p>Progetto dimostrativo. Interfaccia mobile basata sul prototipo Figma.</p>
+		<p><a class="start" href="sito/index.html">Apri OrtolApp →</a></p>
+
+		<h2>Come funziona la demo</h2>
+		<ul>
+			<li>Ogni caricamento della pagina ricomincia dall’onboarding e azzera profilo, carrello, preferiti, carte e ordini. I passaggi interni all’app mantengono i dati.</li>
+			<li>Puoi accedere con qualunque email formalmente valida e una password di fantasia. Ad esempio: <code>remo@example.com</code> e <code>demo</code>. La registrazione permette di impostare nome, cognome e numero di telefono.</li>
+			<li>Nessun dato viene inviato a un server. Non ci sono account, ordini, pagamenti o addebiti reali. Il numero completo della carta e il CVV non vengono conservati.</li>
+			<li>Da PC compare una cornice ispirata a iPhone 16 Pro, con cursore circolare e scorrimento all’interno dello schermo. Da telefono la cornice scompare.</li>
+			<li>Il font, le tre librerie JS e tutti gli elementi grafici necessari sono inclusi.</li>
+		</ul>
+
+		<h2>Percorso di prova</h2>
+		<ol>
+			<li>Scorri l’onboarding e accedi oppure registrati con dati inventati.</li>
+			<li>Apri Frutta, cambia il peso di un prodotto e osserva il prezzo. Aggiungilo ai preferiti e al carrello.</li>
+			<li>Apri Preferiti, prova una ricerca e aggiungi prodotti fino al minimo d’ordine di 5 €.</li>
+			<li>Nel carrello modifica i pesi, elimina una riga e passa alla consegna. Scegli un indirizzo o aggiungine uno.</li>
+			<li>Scegli giorno e fascia oraria; inserisci un telefono di fantasia. Sono abilitate solo fasce che iniziano almeno un’ora dopo il momento corrente, nel fuso Europe/Rome.</li>
+			<li>Aggiungi una carta simulata: <code>4242 4242 4242 4242</code>, scadenza <code>12/30</code>, CVV <code>123</code>, titolare e nome a piacere. Selezionala nel pagamento.</li>
+			<li>Controlla il riepilogo, invia l’ordine e apri “I miei ordini”: lo stato rimane Ricevuto. È possibile annullarlo.</li>
+			<li>Aggiungi un altro prodotto al carrello, poi acquista la Weekly Bag dalla home. La box segue un ordine separato e lascia intatto quel carrello.</li>
+			<li>Aggiorna la pagina per ripartire con una demo vuota.</li>
+		</ol>
+
+		<h2>Pubblicazione su GitHub Pages</h2>
+		<ol>
+			<li>Crea un repository su GitHub.</li>
+			<li>Carica nella radice del repository <strong>il contenuto della cartella <code>sito</code></strong>: <code>index.html</code>, <code>assets</code>, <code>css</code>, <code>js</code> e <code>vendor</code>. Non caricare il RAR al posto dei file.</li>
+			<li>Vai in <strong>Settings → Pages</strong>. In Build and deployment scegli <strong>Deploy from a branch</strong>.</li>
+			<li>Seleziona la branch <strong>main</strong> e la cartella <strong>/(root)</strong>, poi Save.</li>
+			<li>Al termine della pubblicazione GitHub mostrerà il link condivisibile. Aprilo da telefono o PC. Il repository e il sito non sono stati pubblicati automaticamente.</li>
+		</ol>
+		<p>I percorsi delle risorse sono relativi: la demo funziona anche sotto il nome di un repository. Le schermate usano la navigazione tramite hash (<code>#home</code>), senza configurazioni di server o pagine 404 speciali.</p>
+
+		<h2>Cosa contiene l’archivio</h2>
+		<table>
+			<tr>
+				<th>Cartella / file</th>
+				<th>Contenuto</th>
+			</tr>
+			<tr>
+				<td>sito/</td>
+				<td>Web app completa in HTML, CSS e JavaScript, immagini ottimizzate, font e librerie locali.</td>
+			</tr>
+			<tr>
+				<td>originali/App-originali.rar</td>
+				<td>Il tuo archivio originale, conservato senza modifiche.</td>
+			</tr>
+			<tr>
+				<td>documentazione/</td>
+				<td>Specifiche, guida al codice, elenco delle librerie e resoconto delle verifiche.</td>
+			</tr>
+			<tr>
+				<td>LEGGIMI.html</td>
+				<td>Questa guida con il pulsante di avvio.</td>
+			</tr>
+		</table>
+
+		<h2>Librerie incluse</h2>
+		<p><strong>Anime.js 3.2.2</strong> per transizioni, feedback e progresso; <strong>Day.js 1.11.13</strong> con UTC, Timezone e lingua italiana per date e fasce orarie; <strong>Flatpickr 4.6.13</strong> per il calendario. Tutte distribuite con licenza MIT, inclusa in <code>sito/vendor</code>. <strong>Manrope</strong> è incluso localmente con licenza SIL Open Font License 1.1.</p>
+		<p>Le voci Password dimenticata, Notifiche, Privacy e Contattaci rimangono dimostrative e non cliccabili. Non sono implementati disponibilità, gestione commerciale, copertura geografica e altri processi di produzione, come concordato.</p>
+		<p><small>Il file Figma non è stato modificato. Prezzi del catalogo indicativi, non un listino aggiornato in tempo reale.</small></p>
+	</body>
+</html>
